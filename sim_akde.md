@@ -95,4 +95,6 @@ sim_akde <- function(data, output_dir = "ctmm_fits/monthly/") {
   }
   
   return(results)
-}```
+}
+
+
