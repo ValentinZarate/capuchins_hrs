@@ -1,6 +1,6 @@
 # AKDE Estimation and Spatial Analysis Functions
 
-This repository contains a collection of custom functions developed for estimating and analyzing Asymmetric Kernel Density Estimate (AKDE) home ranges using `ctmm` as the primary dependency. The functions included here are designed to simultaneously calculate AKDE for multiple individuals or groups, storing relevant information in easily manageable formats, including shapefiles and summary tables.
+This repository contains a collection of custom functions developed for estimating and analyzing Auto-correlated Kernel Density Estimate (AKDE) home ranges using `ctmm` as the primary dependency. The functions included here are designed to simultaneously calculate AKDE for multiple individuals or groups, storing relevant information in easily manageable formats, including shapefiles and summary tables.
 
 ## Key Features
 
