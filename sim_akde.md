@@ -97,4 +97,39 @@ sim_akde <- function(data, output_dir = "ctmm_fits/monthly/") {
   return(results)
 }
 
+## Detailed Steps
+
+### Directory Setup
+The function first checks if the necessary directories exist and creates them if they do not. Specifically, it creates:
+
+- A main output directory (`ctmm_fits/monthly/`) for storing the fitted models as `.RDS` files.
+- A subdirectory for storing the AKDE shapefiles (`ctmm_fits/monthly/shapes/`).
+
+### Loop Through Identifiers
+The function iterates over each unique `individual.local.identifier` in the dataset. For each identifier:
+
+- The relevant subset of data is extracted.
+- A telemetry object is created using the `as.telemetry` function, specifying the appropriate timezone.
+
+### Model Estimation
+
+- An initial guess of the movement model is made using the `ctmm.guess` function.
+- The best-fitting model is selected using `ctmm.select`, which returns a list of potential models. The first model in this list is assumed to be the best fit.
+
+### AKDE Calculation
+
+- The function calculates the AKDE for the given telemetry data and selected model using the `akde` function.
+- The 95% and 50% AKDE estimates are converted to spatial objects (`sf`) and transformed to the appropriate coordinate system (`EPSG:32721`).
+
+### Output Shapefiles
+
+- The 95% and 50% AKDE estimates are saved as shapefiles in the `ctmm_fits/monthly/shapes/` directory, named according to their `individual.local.identifier`.
+
+### Summary DataFrame
+
+- For each identifier, the function stores the best-fit model, the estimated areas for 95% and 50% AKDE, and the number of locations used in a summary dataframe.
+
+### Return
+
+- The function returns the summary dataframe containing the results for all processed identifiers.
 
