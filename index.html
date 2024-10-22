@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Capuchinos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;700&display=swap" rel="stylesheet">
+    <title>Luis</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Ruda', sans-serif;
             margin: 0;
             padding: 0;
             background-image: url('buffercleanagr.png'); /* Imagen de fondo */
@@ -15,9 +16,19 @@
             background-attachment: fixed;
             color: white;
         }
+        body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay negro con 50% de transparencia */
+    z-index: -1; /* Coloca el overlay detrás del contenido */
+        }
         .navbar {
             overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+            background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
             padding: 14px 20px;
             position: fixed;
             width: 100%;
@@ -34,9 +45,11 @@
             transition: background-color 0.3s ease;
             font-size: 16px;
             margin-right: 10px;
+            border-radius: 5px;
         }
         .navbar a:hover {
-            background-color: #575757;
+    background-color: #575757; /* Color más claro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de agrandar ligeramente */
         }
         .content {
             padding: 80px 20px; /* Añadir espacio superior para compensar la barra fija */
@@ -52,12 +65,14 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         .footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            padding: 20px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #bbb;
+    font-size: 0.9em;
         }
     </style>
 </head>
@@ -76,7 +91,7 @@
     </div>
 
     <div class="footer">
-        <p>© Ejemplo piola. Todos los derechos reservados.</p>
+        <p>© Ejemplo de como funca esto </p>
     </div>
 
 </body>
