@@ -52,8 +52,14 @@
             transform: scale(1.05); /* Efecto de agrandar ligeramente */
         }
         .content {
-            padding: 120px 20px; /* Añadir espacio superior para compensar la barra fija */
+            padding: 120px 20px;
             text-align: center;
+        }
+        .content-box {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+            padding: 20px;
+            border-radius: 10px;
         }
         .lower-content {
             margin-top: 50px;
@@ -109,8 +115,11 @@
     </div>
 
     <div class="content">
-        <h1>Bienvenido al Curso de Capuchinos</h1>
-        <p>Explora las clases usando el menú de navegación superior.</p>
+        <!-- Caja con fondo semitransparente solo alrededor del título y el párrafo -->
+        <div class="content-box">
+            <h1>Página de prueba</h1>
+            <p>Explora las cosas usando el menú de navegación superior.</p>
+        </div>
     </div>
 
     <div class="lower-content">
@@ -127,9 +136,8 @@
     </div>
 
     <div class="footer">
-        <p>© 2024 Curso de Capuchinos. Todos los derechos reservados.</p>
+        <p>© 2024 Prueba piola. Todos los derechos reservados.</p>
     </div>
 
 </body>
 </html>
-
