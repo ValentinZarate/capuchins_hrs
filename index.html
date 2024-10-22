@@ -52,24 +52,29 @@
             transform: scale(1.05); /* Efecto de agrandar ligeramente */
         }
         .content {
-            padding: 100px 20px; /* Espacio superior para compensar la barra fija */
-            display: flex; /* Usamos flex para colocar el texto y la imagen en línea */
+            padding: 120px 20px; /* Añadir espacio superior para compensar la barra fija */
+            text-align: center;
+        }
+        .lower-content {
+            margin-top: 50px;
+            display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 50px 20px;
         }
         .text-area {
             flex: 1;
             padding-right: 20px;
-            font-size: 1.2em;
-            line-height: 1.6em;
+            font-size: 1em; /* Reducido el tamaño del texto */
+            line-height: 1.4em; /* Espaciado entre líneas más ajustado */
         }
         .image-area {
             flex: 1;
             text-align: right;
         }
         .image-area img {
-            width: 300px;
-            height: 300px;
+            width: 250px; /* Imagen más pequeña */
+            height: 250px;
             border-radius: 50%; /* Hace que la imagen sea circular */
             object-fit: cover; /* Asegura que la imagen se ajuste a la forma circular */
             border: 5px solid rgba(255, 255, 255, 0.8); /* Añade un borde blanco semitransparente */
@@ -104,15 +109,20 @@
     </div>
 
     <div class="content">
+        <h1>Bienvenido al Curso de Capuchinos</h1>
+        <p>Explora las clases usando el menú de navegación superior.</p>
+    </div>
+
+    <div class="lower-content">
         <!-- Área de texto sobre las áreas de acción de los monos -->
         <div class="text-area">
-            <h1>Áreas de Acción de los Monos</h1>
+            <h2>Áreas de Acción de los Monos</h2>
             <p>Los monos capuchinos tienen un área de acción que varía en tamaño dependiendo de factores como la disponibilidad de recursos y la estructura del hábitat. Estos primates tienden a usar un rango extenso de territorio para buscar alimentos, interactuar socialmente y protegerse de depredadores. Las áreas de acción pueden estar influenciadas por la estación del año y la competencia con otros grupos de monos.</p>
         </div>
         
         <!-- Imagen circular ubicada a la derecha -->
         <div class="image-area">
-            <img src="mono.jfif" alt="Imagen relacionada con los monos">
+            <img src="pais.png" alt="Imagen de mono">
         </div>
     </div>
 
