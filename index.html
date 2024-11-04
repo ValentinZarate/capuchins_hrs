@@ -11,34 +11,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;700&display=swap" rel="stylesheet">
 <title>Capítulo de Movimientos</title>
 <style>
-    body {
+ body {
         font-family: 'Ruda', sans-serif;
         margin: 0;
         padding: 0;
-        background-image: url('mono.jpg'); /* Imagen de fondo */
-        background-size: contain; /* Ajusta el tamaño de la imagen */
-        background-repeat: no-repeat; /* Evita que la imagen se repita */
-        background-position: center center; /* Centra la imagen */
-        background-attachment: fixed;
-        background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente detrás de la imagen para resaltar el texto */
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente para resaltar el texto */
         color: white;
+        position: relative; /* Necesario para posicionar el ::before correctamente */
     }
-
-    /* Filtro para difuminar la imagen de fondo */
-    body::before {
+   body::before {
         content: "";
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('mono.png');
-        background-size: contain;
+        background-image: url('mono.jpg'); /* Usa la imagen larga y rectangular */
+        background-size: cover; /* La imagen cubre todo el fondo */
         background-repeat: no-repeat;
-        background-position: center;
-        filter: blur(15px); /* Ajusta el nivel de desenfoque aquí */
-        opacity: 0.9; /* Ajusta la opacidad para hacer la imagen más sutil */
-        z-index: -1; /* Envía el filtro de imagen al fondo */
+        background-position: center center; /* Centra la imagen */
+        filter: blur(15px); /* Ajusta el nivel de desenfoque */
+        opacity: 0.9; /* Ajusta la opacidad para la sutileza deseada */
+        z-index: -1; /* Envía el fondo detrás del contenido */
     }
         .navbar {
             overflow: hidden;
