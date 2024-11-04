@@ -9,28 +9,37 @@
     <link rel="icon" type="image/png" href="favicon2.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;700&display=swap" rel="stylesheet">
-    <title>Capítulo de Movimientos</title>
-    <style>
-        body {
-            font-family: 'Ruda', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('mono.png'); /* Imagen de fondo */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-        }
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 55%;
-            background-color: rgba(0, 0, 0, 0.5); /* Overlay negro con 50% de transparencia */
-            z-index: -1; /* Coloca el overlay detrás del contenido */
-        }
+<title>Capítulo de Movimientos</title>
+<style>
+    body {
+        font-family: 'Ruda', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('mono.png'); /* Imagen de fondo */
+        background-size: contain; /* Ajusta el tamaño de la imagen */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center center; /* Centra la imagen */
+        background-attachment: fixed;
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente detrás de la imagen para resaltar el texto */
+        color: white;
+    }
+
+    /* Filtro para difuminar la imagen de fondo */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('mono.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: blur(8px); /* Ajusta el nivel de desenfoque aquí */
+        opacity: 0.3; /* Ajusta la opacidad para hacer la imagen más sutil */
+        z-index: -1; /* Envía el filtro de imagen al fondo */
+    }
         .navbar {
             overflow: hidden;
             background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
