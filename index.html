@@ -12,28 +12,30 @@
 <title>Capítulo de Movimientos</title>
 <style>
   body {
-        font-family: 'Ruda', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente para resaltar el texto */
-        color: white;
-        position: relative; /* Necesario para el ::before */
-    }
+            font-family: 'Ruda', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+            color: white;
+            position: relative; /* Necesario para el ::before */
+        }
 
-    /* Filtro para difuminar la imagen de fondo */
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('mono.jpg.png'); /* Usa la imagen correcta */
-        background-size: cover; /* La imagen cubre todo el fondo */
-        background-repeat: no-repeat;
-        background-position: center center;
-        z-index: -1; /* Envía el fondo detrás del contenido */
-    }
+        /* Filtro para difuminar la imagen de fondo */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('mono.jpg.png'); /* Revisa el nombre y la ubicación */
+            background-size: cover; /* La imagen cubre todo el fondo */
+            background-repeat: no-repeat;
+            background-position: center center;
+            filter: blur(10px); /* Difuminado opcional */
+            opacity: 0.9; /* Ajusta la opacidad si es necesario */
+            z-index: -1; /* Envía el fondo detrás del contenido */
+        }
         .navbar {
             overflow: hidden;
             background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
