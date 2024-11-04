@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Agregar el favicon -->
-    
     <link rel="icon" type="image/png" href="favicon2.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;700&display=swap" rel="stylesheet">
-<title>Capítulo de Movimientos</title>
-<style>
-  body {
+    <title>Capítulo de Movimientos</title>
+    <style>
+        body {
             font-family: 'Ruda', sans-serif;
             margin: 0;
             padding: 0;
@@ -20,7 +19,7 @@
             position: relative; /* Necesario para el ::before */
         }
 
-        /* Filtro para difuminar la imagen de fondo */
+        /* Imagen de fondo */
         body::before {
             content: "";
             position: fixed;
@@ -28,12 +27,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('mono.jpg.png'); /* Revisa el nombre y la ubicación */
-            background-size: cover; /* La imagen cubre todo el fondo */
+            background-image: url('mono.jpg'); /* Verifica el nombre y la ubicación */
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
-            z-index: -1; /* Envía el fondo detrás del contenido */
+            z-index: -1;
         }
+
         .navbar {
             overflow: hidden;
             background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
@@ -43,6 +43,7 @@
             top: 0;
             z-index: 1000;
         }
+
         .navbar a {
             float: left;
             display: block;
@@ -55,20 +56,36 @@
             margin-right: 10px;
             border-radius: 5px;
         }
+
         .navbar a:hover {
-            background-color: #575757; /* Color más claro al pasar el ratón */
-            transform: scale(1.05); /* Efecto de agrandar ligeramente */
+            background-color: #575757;
+            transform: scale(1.05);
         }
+
         .content {
             padding: 120px 20px;
-            text-align: center;
         }
+
         .content-box {
-            display: inline-block;
+            max-width: 600px; /* Limita el ancho de la caja */
             background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
             padding: 20px;
             border-radius: 10px;
+            text-align: left; /* Alineación izquierda para el contenido interno */
+            margin: 0 auto; /* Centra la caja en la página */
         }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 1.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
         .lower-content {
             margin-top: 50px;
             display: flex;
@@ -76,34 +93,27 @@
             align-items: center;
             padding: 50px 20px;
         }
+
         .text-area {
             flex: 1;
             padding-right: 20px;
-            font-size: 1em; /* Reducido el tamaño del texto */
-            line-height: 1.4em; /* Espaciado entre líneas más ajustado */
+            font-size: 1em;
+            line-height: 1.4em;
         }
+
         .image-area {
             flex: 1;
             text-align: right;
         }
+
         .image-area img {
-            width: 250px; /* Imagen más pequeña */
+            width: 250px;
             height: 250px;
-            border-radius: 50%; /* Hace que la imagen sea circular */
-            object-fit: cover; /* Asegura que la imagen se ajuste a la forma circular */
-            border: 5px solid rgba(255, 255, 255, 0.8); /* Añade un borde blanco semitransparente */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.8);
         }
-        h1 {
-            text-align: left;
-            padding-left: 20px;
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-        }
-        p {
-            font-size: 1.5em;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
+
         .footer {
             position: relative;
             margin-top: 40px;
@@ -119,26 +129,23 @@
 
     <div class="navbar">
         <a href="akde_code.html">Home Ranges</a>
-        <a href="rsf.html">RSF</a> <!-- Enlace a tu archivo HTML existente -->
+        <a href="rsf.html">RSF</a>
         <a href="hmm.html">HMM</a>
     </div>
 
     <div class="content">
-        <!-- Caja con fondo semitransparente solo alrededor del título y el párrafo -->
         <div class="content-box">
-            <h1>Movimienos de Monos Caí (Sapajus nigritus)</h1>
+            <h1>Movimientos de Monos Caí (Sapajus nigritus)</h1>
             <p>Explora las cosas usando el menú de navegación superior.</p>
         </div>
     </div>
 
     <div class="lower-content">
-        <!-- Área de texto sobre las áreas de acción de los monos -->
         <div class="text-area">
             <h2>Áreas de Acción de los Monos</h2>
             <p>Los monos capuchinos tienen un área de acción que varía en tamaño dependiendo de factores como la disponibilidad de recursos y la estructura del hábitat. Estos primates tienden a usar un rango extenso de territorio para buscar alimentos, interactuar socialmente y protegerse de depredadores. Las áreas de acción pueden estar influenciadas por la estación del año y la competencia con otros grupos de monos.</p>
         </div>
         
-        <!-- Imagen circular ubicada a la derecha -->
         <div class="image-area">
             <img src="pais.png" alt="Imagen de mono">
         </div>
@@ -150,3 +157,4 @@
 
 </body>
 </html>
+
