@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `sim_akde` function is designed to calculate the area of action (AKDE) for various groups of monkeys based on telemetry data. The function processes multiple telemetry datasets (identified by `individual.local.identifier`), estimates movement models, and generates AKDE estimates for each group. The function outputs the results in the form of shapefiles and a summary dataframe, which includes the best-fit movement model, the 95% and 50% AKDE estimates, and the number of locations used in the estimation.
+The `sim_akde` function is designed to calculate the home ranges (AKDE) for various indiviuals based on telemetry data. The function processes multiple telemetry datasets (identified by `individual.local.identifier`), estimates movement models, and generates AKDE estimates for each group. The function outputs the results in the form of shapefiles and a summary dataframe, which includes the best-fit movement model, the 95% and 50% AKDE estimates, and the number of locations used in the estimation.
 
 ## Requirements
 
@@ -11,7 +11,7 @@ Before using the `sim_akde` function, ensure that the following prerequisites ar
 ### 1. Data Format:
 - The input `data` should be a `data.frame` containing at least the following columns:
   - `individual.local.identifier`: A unique identifier for each group's telemetry data.
-  - `grupo`: The group to which the monkey belongs.
+  - `grupo`: The group to which the animal belongs.
   - `year`: The year of the observation.
   - `month`: The month of the observation.
   - Any additional columns required for creating a `telemetry` object.
